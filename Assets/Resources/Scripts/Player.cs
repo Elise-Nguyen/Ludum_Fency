@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     public float speed = 1f;
     public Rigidbody2D rb;
     public bool crouch = false;
+    public bool portal = false;
+    public bool exitPortal = false;
         
 
     // Start is called before the first frame update
