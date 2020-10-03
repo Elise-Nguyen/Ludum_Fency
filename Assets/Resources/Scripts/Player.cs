@@ -41,4 +41,9 @@ public class Player : MonoBehaviour
             crouch = false;
         }
     }
+
+    public void Action()
+    {
+
+    }
 }
