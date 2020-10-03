@@ -5,9 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+    [System.Serializable]
+    private class Sound
+    {
+        public string clipName;
+        public AudioClip clip;
+        [HideInInspector] public AudioSource source;
+        [Range(0f, 1f)] 
+        public float volume = 0.7f;
+        [Range(.1f, 3f)] 
+        public float pitch = 1.0f;
+        public bool playOnAwake;
+        public bool loop;
+    }
     public GameObject MusicPrefab;
     public static float volumeGainGlobal = 0.7f;
-    public Sound[] sounds;
+    [SerializeField]
+    private Sound[] sounds = new Sound[1];
     public static AudioManager instance;
     
 
@@ -73,7 +87,7 @@ public class AudioManager : MonoBehaviour
     }
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.clipName == name);
         if (s == null)
         {
             Debug.LogWarning("Sound " + name + " not found!");
@@ -85,7 +99,7 @@ public class AudioManager : MonoBehaviour
 
     public void Stop(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.clipName == name);
         if (s == null)
         {
             Debug.LogWarning("Sound " + name + " not found!");
@@ -99,7 +113,7 @@ public class AudioManager : MonoBehaviour
 
     public void PitchChange(string name, float _pitch)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.clipName == name);
         if (s == null)
         {
             Debug.LogWarning("Sound " + name + " not found!");
@@ -111,7 +125,7 @@ public class AudioManager : MonoBehaviour
 
     public void VolumeChange(string name, float _volume)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = Array.Find(sounds, sound => sound.clipName == name);
         if (s == null)
         {
             Debug.LogWarning("Sound " + name + " not found!");
@@ -121,19 +135,5 @@ public class AudioManager : MonoBehaviour
         s.source.volume = _volume;
     }
     #endregion
-}
-
-[System.Serializable]
-public class Sound
-{
-    public string name;
-
-    public AudioClip clip;
-    
-    [HideInInspector] public AudioSource source;
-    [Range(0f, 1f)] public float volume = 0.7f;
-    [Range(.1f, 3f)] public float pitch = 1f;
-    public bool playOnAwake;
-    public bool loop;
 }
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2853219601152946285}
-  - component: {fileID: 4763458022944183861}
+  - component: {fileID: 2640034378287392487}
   m_Layer: 0
   m_Name: Jukebox
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4763458022944183861
+--- !u!114 &2640034378287392487
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,38 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MusicPrefab: {fileID: 0}
   sounds:
-  - name: 
+  - clipName: 
     clip: {fileID: 0}
     source: {fileID: 0}
-    volume: 0
-    pitch: 0
-    playOnAwake: 0
-    loop: 0
-  - name: 
-    clip: {fileID: 0}
-    source: {fileID: 0}
-    volume: 0
-    pitch: 0
-    playOnAwake: 0
-    loop: 0
-  - name: 
-    clip: {fileID: 0}
-    source: {fileID: 0}
-    volume: 0
-    pitch: 0
-    playOnAwake: 0
-    loop: 0
-  - name: 
-    clip: {fileID: 0}
-    source: {fileID: 0}
-    volume: 0
-    pitch: 0
-    playOnAwake: 0
-    loop: 0
-  - name: 
-    clip: {fileID: 0}
-    source: {fileID: 0}
-    volume: 0
-    pitch: 0
+    volume: 0.7
+    pitch: 1
     playOnAwake: 0
     loop: 0
