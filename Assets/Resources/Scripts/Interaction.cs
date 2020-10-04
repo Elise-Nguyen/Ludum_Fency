@@ -20,7 +20,7 @@ public class Interaction : MonoBehaviour
     {
         if (isInRange)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
                 interactAction.Invoke();
             }
