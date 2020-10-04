@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     private float timePortal = 1f;
     private float timeP = 0f;
+    private bool canThrowbone = true;
 
     public static PlayerPhase currentPhase = PlayerPhase.Baby;
         
@@ -31,7 +32,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-
+        ThrowBone();
         if (portal)
         {
            
@@ -100,12 +101,22 @@ public class Player : MonoBehaviour
 
     public void ThrowBone()
     {
-        if(currentPhase == PlayerPhase.Squeleton)
+        if(/*currentPhase == PlayerPhase.Squeleton && */Input.GetKey(KeyCode.LeftControl) && canThrowbone)
         {
             GameObject bulletInstance = Instantiate(bulletprefab, transform.position, Quaternion.identity);
-            
-
+            canThrowbone = false;
+            if(!canThrowbone)
+            {
+                StartCoroutine(CooldownBone());
+            }
         }
+    }
+
+    public IEnumerator CooldownBone()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        canThrowbone = true;
+        yield return null;
     }
 
     public void Action(string tag)

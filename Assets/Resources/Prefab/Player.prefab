@@ -105,7 +105,8 @@ MonoBehaviour:
   crouch: 0
   portal: 0
   exitPortal: 0
-  bulletprefab: {fileID: 0}
+  bulletprefab: {fileID: 6355036722302561060, guid: adbf432d16a67c741ac2b83eacb0b2e2,
+    type: 3}
 --- !u!50 &5275092252060364999
 Rigidbody2D:
   serializedVersion: 4
@@ -121,7 +122,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
