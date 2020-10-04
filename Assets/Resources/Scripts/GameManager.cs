@@ -50,22 +50,22 @@ public class GameManager : MonoBehaviour
         switch(selectedPhase){
             case PlayerPhase.Baby:
             {
-
+                //Code apparition phase bébé
             }
             break;
             case PlayerPhase.Adult:
             {
-
+                //Code apparition phase adulte
             }
             break;
             case PlayerPhase.GrandFather:
             {
-
+                //Code apparition phase grandpère
             }
             break;
             case PlayerPhase.Squeleton:
             {
-
+                //Code apparition phase squelette
             }
             break;
 
