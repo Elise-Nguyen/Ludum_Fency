@@ -44,11 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MusicPrefab: {fileID: 0}
-  sounds:
-  - clipName: 
-    clip: {fileID: 0}
-    source: {fileID: 0}
-    volume: 0.7
-    pitch: 1
-    playOnAwake: 0
-    loop: 0
+  sounds: []
