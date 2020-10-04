@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        selectedEnigma = enigmaRegistry[0];
     }
 
     public void ChangePlayerState(PlayerPhase selectedPhase)
