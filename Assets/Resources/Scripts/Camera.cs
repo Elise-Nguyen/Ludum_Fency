@@ -49,7 +49,7 @@ public class Camera : MonoBehaviour
     public void Zoom()
     {
         
-        Vector3 newPos = new Vector3(player.GetComponent<Player>().position.x, 0, -2);
+        Vector3 newPos = new Vector3(player.GetComponent<Player>().transform.position.x, 0, -2);
         if (player.GetComponent<Player>().portal)
         {
             deZoom = false;

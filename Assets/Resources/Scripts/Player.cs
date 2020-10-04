@@ -28,12 +28,7 @@ public class Player : MonoBehaviour
 
         if (portal)
         {
-            Vector3 newPos = new Vector3(transform.position.x + 0.5f, 0f, -1);
-            if (timeP < timePortal)
-            {
-                transform.position = Vector3.Lerp(transform.position, newPos, timeP);
-                timeP = Time.deltaTime / timePortal;
-            }
+           
         }
         
     }
@@ -92,7 +87,7 @@ public class Player : MonoBehaviour
     {
         exitPortal = true;
     }
-
+    /*
     private void OnTriggerEnter(Collider other)
     {
        // if (Input.GetKeyDown(KeyCode.Space))
@@ -111,5 +106,5 @@ public class Player : MonoBehaviour
                 UsePortal();
             }
         
-    }
+    }*/
 }
