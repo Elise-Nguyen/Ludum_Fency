@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     private float timePortal = 1f;
     private float timeP = 0f;
+
+    public static PlayerPhase currentPhase = PlayerPhase.Baby;
         
 
     // Start is called before the first frame update
