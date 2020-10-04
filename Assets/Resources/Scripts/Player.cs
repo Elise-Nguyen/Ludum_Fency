@@ -41,15 +41,15 @@ public class Player : MonoBehaviour
 
     public void Move()
     {
-       if (Input.GetKeyDown(KeyCode.RightArrow))
+       if (Input.GetKey(KeyCode.RightArrow))
         {
             rb.velocity = Vector2.right * speed;
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb.velocity = Vector2.left * speed;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             crouch = true;
         }
