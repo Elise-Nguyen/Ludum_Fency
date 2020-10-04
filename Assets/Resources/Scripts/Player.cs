@@ -79,6 +79,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void InteractObject(GameObject element) {
+        // Interaction avec le tableau
+        if (element.tag == "Tableau" && Input.GetKeyDown(KeyCode.Space)) {
+            var rotation = element.transform.rotation.eulerAngles;
+            Debug.Log(rotation.z);
+            if (rotation.z == 90) {
+                rotation.z = 0;
+                element.transform.rotation = Quaternion.Euler(rotation);
+                element.transform.position += new Vector3(-GetComponent<SpriteRenderer>().bounds.size.x / 1.8f, -GetComponent<SpriteRenderer>().bounds.size.y / 1.8f, 0);
+
+            } else {
+                rotation.z = 90;
+                element.transform.rotation = Quaternion.Euler(rotation);
+                element.transform.position += new Vector3(GetComponent<SpriteRenderer>().bounds.size.x / 1.8f, GetComponent<SpriteRenderer>().bounds.size.y / 1.8f, 0);
+            }
+        }   
+    }
+
     public void Action(string tag)
     {
        
