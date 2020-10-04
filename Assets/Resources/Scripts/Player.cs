@@ -63,9 +63,19 @@ public class Player : MonoBehaviour
         } 
     }
 
+    // Méthode qui permet de pousser un élément, appelé à travers les interactions
     public void PushElement(GameObject element) {
-        if (Input.GetKey(KeyCode.Space)) {
-            element.transform.position = this.transform.position;
+        element.transform.position = this.transform.position;
+    }
+
+    // Méthode qui permet d'afficher le cadenas, appelé à travers les interactions
+    public void ShowLock(GameObject element) {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            if (!element.activeSelf) {
+                element.SetActive(true);
+            } else {
+                element.SetActive(false);
+            }
         }
     }
 
