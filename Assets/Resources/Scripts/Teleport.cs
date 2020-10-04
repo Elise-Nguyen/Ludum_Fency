@@ -22,7 +22,7 @@ public class Teleport : MonoBehaviour
 
        // if (!waitActive)
         
-            Debug.Log("Wait");
+            //Debug.Log("Wait");
             //StartCoroutine(Wait());
         
         player.transform.position = destinationPosition.position;
