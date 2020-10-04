@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerPhase {Baby, Adult, GrandFather, Squeleton};
 public class GameManager : MonoBehaviour
 {
-    public enum PlayerPhase {Baby, Adult, GrandFather, Squeleton}
-    public PlayerPhase currentPhase = PlayerPhase.Baby;
-    public static GameManager instance;
+    private bool isTimedout = false; 
+    private bool isCompleted = false; 
+    public float timerEnigmaBaby = 60f;
+    public float timerEnigmaAdult = 45f;
+    public float timerEnigmaGrandfather = 30f;
+    public float timerEnigmaSqueleton = 20f;
     
+    public static GameManager instance;
+    public     
     void Awake()
     {
         if (instance == null)
@@ -24,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangePlayerState(PlayerPhase selectedPhase)
     {
-        currentPhase = selectedPhase;
+        Player.currentPhase = selectedPhase;
         switch(selectedPhase){
             case PlayerPhase.Baby:
             {
@@ -50,4 +56,44 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LaunchEnigma()
+    {
+        isCompleted = false;
+        isTimedout = false;
+        StartCoroutine(Enigma(Player.currentPhase));
+    }
+    
+    public void CompleteEnigma()
+    {
+        StopCoroutine(Enigma(Player.currentPhase));
+        isCompleted = true;
+    }
+
+    IEnumerator Enigma(PlayerPhase timerCategory)
+    {
+        switch(timerCategory)
+        {
+            case PlayerPhase.Baby:
+            {
+                yield return new WaitForSecondsRealtime(timerEnigmaBaby);
+            }
+            break;
+            case PlayerPhase.Adult:
+            {
+                yield return new WaitForSecondsRealtime(timerEnigmaAdult);
+            }
+            break;
+            case PlayerPhase.GrandFather:
+            {
+                yield return new WaitForSecondsRealtime(timerEnigmaGrandfather);
+            }
+            break;
+            case PlayerPhase.Squeleton:
+            {
+                yield return new WaitForSecondsRealtime(timerEnigmaSqueleton);
+            }
+            break;
+        }
+        isTimedout = true;
+    }
 }

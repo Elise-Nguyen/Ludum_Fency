@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public bool crouch = false;
     public bool portal = false;
     public bool exitPortal = false;
+
+    public static PlayerPhase currentPhase = PlayerPhase.Baby;
         
 
     // Start is called before the first frame update
