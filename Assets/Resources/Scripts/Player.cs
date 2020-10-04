@@ -60,6 +60,12 @@ public class Player : MonoBehaviour
         } 
     }
 
+    public void PushElement(GameObject element) {
+        if (Input.GetKey(KeyCode.Space)) {
+            element.transform.position = this.transform.position;
+        }
+    }
+
     public void Action(string tag)
     {
        
