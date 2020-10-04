@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class Teleport : MonoBehaviour
 {
-   public Transform destinationPosition;
+    public Transform destinationPosition;
+    //private bool waitActive = false;
+
     /*
    void OnTriggerEnter2D(Collider2D other)
    {
@@ -15,16 +17,27 @@ public class Teleport : MonoBehaviour
        }   
    }*/
 
-   public void TeleportPlayerTo(GameObject player)
-   {
-        new WaitForSecondsRealtime(1f);
-       player.transform.position = destinationPosition.position;
-   }
-
-    public static void MyDelay(int seconds)
+    public void TeleportPlayerTo(GameObject player)
     {
-        TimeSpan ts = DateTime.Now + TimeSpan.FromSeconds(seconds);
 
-        do { } while (DateTime.Now < ts);
+       // if (!waitActive)
+        
+            Debug.Log("Wait");
+            //StartCoroutine(Wait());
+        
+        player.transform.position = destinationPosition.position;
+        
     }
+/*
+    IEnumerator Wait()
+    {
+        waitActive = true;
+        yield return new WaitForSeconds(2.0f);
+        waitActive = false;
+    }
+    */
+
 }
+
+   
+    
