@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    public List<Vector3> position;
+    public List<GameObject> position;
     public GameObject player;
     private int level = 0;
     
@@ -19,7 +19,7 @@ public class Camera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = position[0];
+        transform.position = position[0].transform.position;
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class Camera : MonoBehaviour
             level++;
             if (timeD < timeDeZoom)
             {
-                transform.position = Vector3.Lerp(transform.position, position[level], timeD);
+                transform.position = Vector3.Lerp(transform.position, position[level].transform.position, timeD);
                 timeD += Time.deltaTime / timeDeZoom;
             }
             else
@@ -83,7 +83,7 @@ public class Camera : MonoBehaviour
                 timeD = 0;
                 player.GetComponent<Player>().portal = false;
                 player.GetComponent<Player>().exitPortal = false;
-                transform.position = position[level];
+                transform.position = position[level].transform.position;
             }
         }
     }
