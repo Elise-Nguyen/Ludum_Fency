@@ -7,6 +7,9 @@ public class Player : MonoBehaviour
     public Vector2 position;
     public float speed = 1f;
     public Rigidbody2D rb;
+    public int age = 1;
+    public int niveau = 0;
+
     public bool crouch = false;
     public bool portal = false;
     public bool exitPortal = false;
@@ -89,12 +92,19 @@ public class Player : MonoBehaviour
     public void UsePortal()
     {
         portal = true;
+        niveau++;
     }
 
     public void ExitPortal()
     {
         exitPortal = true;
+        if(niveau%3 == 0)
+        {
+            age++;
+        }
     }
+
+    
     /*
     private void OnTriggerEnter(Collider other)
     {
