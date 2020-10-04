@@ -33,13 +33,13 @@ public class Interaction : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             isInRange = true;
-            Debug.Log("Player enter in range");
+            //Debug.Log("Player enter in range");
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isInRange = false;
-        Debug.Log("Player exit range");
+        //Debug.Log("Player exit range");
     }
 }

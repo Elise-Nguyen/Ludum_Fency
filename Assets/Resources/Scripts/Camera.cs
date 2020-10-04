@@ -51,7 +51,7 @@ public class Camera : MonoBehaviour
             {
                 transform.position = Vector3.Lerp(transform.position, newPos, timeZ);
                 timeZ += Time.deltaTime / timeZoom;
-                Debug.Log("temps Zoom " + timeZ);
+               // Debug.Log("temps Zoom " + timeZ);
             }
             else
             {
