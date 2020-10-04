@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     public bool crouch = false;
     public bool portal = false;
     public bool exitPortal = false;
+
+    private float timePortal = 1f;
+    private float timeP = 0f;
         
 
     // Start is called before the first frame update
@@ -21,7 +24,23 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        Move();
+
+        if (portal)
+        {
+            Vector3 newPos = new Vector3(transform.position.x + 0.5f, 0f, -1);
+            if (timeP < timePortal)
+            {
+                transform.position = Vector3.Lerp(transform.position, newPos, timeP);
+                timeP = Time.deltaTime / timePortal;
+            }
+        }
+        
+    }
+
+    public void Move()
+    {
+       if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             rb.velocity = Vector2.right * speed;
         }
@@ -41,11 +60,56 @@ public class Player : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             crouch = false;
-        }
+        } 
     }
 
-    public void Action()
+    public void Action(string tag)
     {
+       
+        /*if (Input.GetKeyDown(KeyCode.Space))
+        { Debug.Log("Portal activé");
+            if(string.Equals(tag, "Portal"))
+            {
+                
+                Vector3 newPos = new Vector3(transform.position.x + 0.5f, 0f, -1);
+                portal = true;
+                if (timeP < timePortal)
+                {
+                    transform.position = Vector3.Lerp(transform.position, newPos, timeP);
+                    timeP = Time.deltaTime / timePortal;
+                }
 
+            }
+        }*/
+    }
+
+    public void UsePortal()
+    {
+        portal = true;
+    }
+
+    public void ExitPortal()
+    {
+        exitPortal = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+       // if (Input.GetKeyDown(KeyCode.Space))
+            
+            
+        if(other.CompareTag("Puzzle"))
+        {
+            
+            //Action("Puzzle");
+        }
+        else  if(other.CompareTag("Portal"))
+        {
+            //Action("Portal");
+            
+                Debug.Log("Portail activé");
+                UsePortal();
+            }
+        
     }
 }
