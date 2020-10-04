@@ -64,8 +64,13 @@ public class Player : MonoBehaviour
     }
 
     public void PushElement(GameObject element) {
-        if (Input.GetKey(KeyCode.Space)) {
-            element.transform.position = this.transform.position;
+        element.transform.position = this.transform.position;
+    }
+
+
+    public void ShowLock(GameObject element) {
+        if (!element.activeSelf) {
+            element.SetActive(true);
         }
     }
 
