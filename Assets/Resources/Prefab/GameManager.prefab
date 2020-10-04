@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8204756350278269156
+--- !u!1 &3902899730420317780
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2853219601152946285}
-  - component: {fileID: 2640034378287392487}
+  - component: {fileID: 7542993738959482783}
+  - component: {fileID: 2911924504579303855}
   m_Layer: 0
-  m_Name: Jukebox
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &2853219601152946285
+--- !u!4 &7542993738959482783
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8204756350278269156}
+  m_GameObject: {fileID: 3902899730420317780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1171.2281, y: 693.8945, z: -367.95255}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2640034378287392487
+--- !u!114 &2911924504579303855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8204756350278269156}
+  m_GameObject: {fileID: 3902899730420317780}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbcde12356cc9394a8619c797b249458, type: 3}
+  m_Script: {fileID: 11500000, guid: dfe8036fd635625418f0513772666c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicPrefab: {fileID: 0}
-  sounds: []
+  currentPhase: 0
