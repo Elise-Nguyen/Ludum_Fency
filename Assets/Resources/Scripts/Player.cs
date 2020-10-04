@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
 
     public void ThrowBone()
     {
-        if(/*currentPhase == PlayerPhase.Squeleton && */Input.GetKey(KeyCode.LeftControl) && canThrowbone)
+        if(currentPhase == PlayerPhase.Squeleton && Input.GetKey(KeyCode.LeftControl) && canThrowbone)
         {
             GameObject bulletInstance = Instantiate(bulletprefab, transform.position, Quaternion.identity);
             canThrowbone = false;
@@ -109,6 +109,10 @@ public class Player : MonoBehaviour
             {
                 StartCoroutine(CooldownBone());
             }
+        }
+        else
+        {
+            Debug.LogWarning("You are not in correct phase to throw bones");
         }
     }
 
