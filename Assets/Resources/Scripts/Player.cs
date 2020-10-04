@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public bool crouch = false;
     public bool portal = false;
     public bool exitPortal = false;
+    public GameObject bulletprefab;
 
     private float timePortal = 1f;
     private float timeP = 0f;
@@ -95,6 +96,16 @@ public class Player : MonoBehaviour
                 element.transform.position += new Vector3(GetComponent<SpriteRenderer>().bounds.size.x / 1.8f, GetComponent<SpriteRenderer>().bounds.size.y / 1.8f, 0);
             }
         }   
+    }
+
+    public void ThrowBone()
+    {
+        if(currentPhase == PlayerPhase.Squeleton)
+        {
+            GameObject bulletInstance = Instantiate(bulletprefab, transform.position, Quaternion.identity);
+            
+
+        }
     }
 
     public void Action(string tag)
