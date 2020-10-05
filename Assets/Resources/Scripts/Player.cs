@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private bool canThrowbone = true;
 
     public static PlayerPhase currentPhase = PlayerPhase.Baby;
+
+    public Sprite[] sprites;
         
 
     // Start is called before the first frame update
