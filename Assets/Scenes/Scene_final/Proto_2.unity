@@ -381,20 +381,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 7415651996007202301, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 8d1b58942f92c364893dababd59bd81b,
+        type: 3}
     - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.6926217
+      value: 2.695
       objectReference: {fileID: 0}
     - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6073015
+      value: -1.625
       objectReference: {fileID: 0}
     - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
@@ -439,18 +445,48 @@ PrefabInstance:
     - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.04
+      value: -0.8754969
       objectReference: {fileID: 0}
     - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.12
+      value: 0.69309074
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415651996007202302, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1246893
       objectReference: {fileID: 0}
     - target: {fileID: 7415651996007202303, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: destinationPosition
       value: 
       objectReference: {fileID: 2117220360}
+    - target: {fileID: 7951642073332470546, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00035764274
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951642073332470546, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0027106088
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951642073332470546, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015708253
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951642073332470546, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.10154152
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951642073332470546, guid: 9b7cdcca57b42b7468587d44de628051,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7951642073332470547, guid: 9b7cdcca57b42b7468587d44de628051,
         type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1652,12 +1688,12 @@ PrefabInstance:
     - target: {fileID: 5275092252060365050, guid: eecd4ffdba02f8244b928ddfbe79a750,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.055
+      value: 2.618
       objectReference: {fileID: 0}
     - target: {fileID: 5275092252060365050, guid: eecd4ffdba02f8244b928ddfbe79a750,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.798
+      value: -1.77
       objectReference: {fileID: 0}
     - target: {fileID: 5275092252060365050, guid: eecd4ffdba02f8244b928ddfbe79a750,
         type: 3}
@@ -2012,7 +2048,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.4478464}
+  m_Offset: {x: 0, y: -2.4409401}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2023,7 +2059,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.64, y: 1.0592039}
+  m_Size: {x: 6.64, y: 1.0730165}
   m_EdgeRadius: 0
 --- !u!61 &1100757677
 BoxCollider2D:

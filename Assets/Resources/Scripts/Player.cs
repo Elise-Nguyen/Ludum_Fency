@@ -116,9 +116,7 @@ public class Player : MonoBehaviour
             }
         }
         else
-        {
-            Debug.LogWarning("You are not in correct phase to throw bones");
-        }
+        {}
     }
 
     public IEnumerator CooldownBone()
