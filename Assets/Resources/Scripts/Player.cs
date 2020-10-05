@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Vector2 position;
     public float speed = 1f;
     public Rigidbody2D rb;
-    public int age = 1;
+    public int age = 0;
     public int niveau = 0;
 
     public bool crouch = false;
@@ -21,6 +21,12 @@ public class Player : MonoBehaviour
     private bool canThrowbone = true;
 
     public static PlayerPhase currentPhase = PlayerPhase.Baby;
+
+    // TODO : Need to be set a true when babyEnigma is clear
+    [HideInInspector] public bool babyEnigma;
+
+    public List<Sprite> sprites = new List<Sprite>();
+    public SpriteRenderer currentSprite;
         
 
     // Start is called before the first frame update
@@ -149,7 +155,10 @@ public class Player : MonoBehaviour
     public void UsePortal()
     {
         portal = true;
-        niveau++;
+        //niveau++;
+        age++;
+
+        currentSprite.sprite = sprites[age - 1];
     }
 
     public void ExitPortal()
