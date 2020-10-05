@@ -19,14 +19,44 @@ public class Teleport : MonoBehaviour
 
     public void TeleportPlayerTo(GameObject player)
     {
+        Player character = player.GetComponent<Player>();
 
-       // if (!waitActive)
-        
-            //Debug.Log("Wait");
-            //StartCoroutine(Wait());
-        
-        player.transform.position = destinationPosition.position;
-        
+        if (Player.currentPhase == PlayerPhase.Baby)
+        {
+            if (!character.babyEnigma)
+            {
+                if (!GameManager.instance.rocks[0].activeSelf && !GameManager.instance.rocks[1].activeSelf && !GameManager.instance.rocks[2].activeSelf)
+                {
+                    Player.currentPhase = PlayerPhase.Adult;
+                    character.babyEnigma = true;
+                    character.UsePortal();
+                }
+            }
+            else
+            {
+                Debug.Log("Need to store each rock on the good recipient!");
+            }
+            // Change appareance here
+        }
+        // if (!waitActive)
+
+        //Debug.Log("Wait");
+        //StartCoroutine(Wait());
+
+        //player.transform.position = destinationPosition.position;
+
+    }
+
+    void FixedUpdate()
+    {
+        if(!GameManager.instance.isCompleted && !GameManager.instance.isTimedOut)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
     }
 /*
     IEnumerator Wait()
