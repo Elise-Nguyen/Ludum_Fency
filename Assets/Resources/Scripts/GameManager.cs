@@ -45,32 +45,9 @@ public class GameManager : MonoBehaviour
         selectedEnigma = enigmaRegistry[0];
     }
 
-    public void ChangePlayerState(PlayerPhase selectedPhase)
+    public void ChangePlayerState(GameObject player)
     {
-        Player.currentPhase = selectedPhase;
-        switch(selectedPhase){
-            case PlayerPhase.Baby:
-            {
-                //Code apparition phase bébé
-            }
-            break;
-            case PlayerPhase.Adult:
-            {
-                //Code apparition phase adulte
-            }
-            break;
-            case PlayerPhase.GrandFather:
-            {
-                //Code apparition phase grandpère
-            }
-            break;
-            case PlayerPhase.Squeleton:
-            {
-                //Code apparition phase squelette
-            }
-            break;
-
-        }
+        player.GetComponent<SpriteRenderer>().sprite = player.GetComponent<Player>().sprites[(int)Player.currentPhase];
     }
 
     public void LaunchEnigma(int selectedEnigmaID)

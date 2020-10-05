@@ -26,7 +26,8 @@ public class Teleport : MonoBehaviour
             //StartCoroutine(Wait());
         
         player.transform.position = destinationPosition.position;
-        
+        Player.currentPhase++;
+        GameManager.instance.ChangePlayerState(player);
     }
 /*
     IEnumerator Wait()

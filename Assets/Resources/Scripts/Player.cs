@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     private bool canThrowbone = true;
 
     public static PlayerPhase currentPhase = PlayerPhase.Baby;
+
+    public Sprite[] sprites;
         
 
     // Start is called before the first frame update
@@ -114,9 +116,7 @@ public class Player : MonoBehaviour
             }
         }
         else
-        {
-            Debug.LogWarning("You are not in correct phase to throw bones");
-        }
+        {}
     }
 
     public IEnumerator CooldownBone()
