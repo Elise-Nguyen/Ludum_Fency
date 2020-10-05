@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7415651996007202289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
-  m_LocalScale: {x: -0.04, y: 0.12, z: 1}
+  m_LocalScale: {x: -0.008062551, y: 0.119021535, z: 1}
   m_Children:
   - {fileID: 7951642073332470572}
   m_Father: {fileID: 0}
@@ -180,11 +180,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: UsePortal
-        m_Mode: 1
+        m_MethodName: ShowLock
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 8013939375394045173, guid: b33489fad20c8a8918f774557444fb6e,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
