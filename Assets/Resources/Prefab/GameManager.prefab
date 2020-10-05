@@ -43,45 +43,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfe8036fd635625418f0513772666c89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completedEnigmas:
-  - assignedPhase: 0
-    enigmaID: 1
+  enigmaRegistry: []
+  selectedEnigma:
+    assignedPhase: 0
+    enigmaID: 0
     isCompleted: 0
-  - assignedPhase: 0
-    enigmaID: 2
-    isCompleted: 0
-  - assignedPhase: 0
-    enigmaID: 3
-    isCompleted: 0
-  - assignedPhase: 1
-    enigmaID: 4
-    isCompleted: 0
-  - assignedPhase: 1
-    enigmaID: 5
-    isCompleted: 0
-  - assignedPhase: 1
-    enigmaID: 6
-    isCompleted: 0
-  - assignedPhase: 2
-    enigmaID: 7
-    isCompleted: 0
-  - assignedPhase: 2
-    enigmaID: 8
-    isCompleted: 0
-  - assignedPhase: 2
-    enigmaID: 9
-    isCompleted: 0
-  - assignedPhase: 3
-    enigmaID: 10
-    isCompleted: 0
-  - assignedPhase: 3
-    enigmaID: 11
-    isCompleted: 0
-  - assignedPhase: 3
-    enigmaID: 12
-    isCompleted: 0
-  selectedEnigma: 1
   timerEnigmaBaby: 60
   timerEnigmaAdult: 45
   timerEnigmaGrandfather: 30
   timerEnigmaSqueleton: 20
+  rocks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Interaction : MonoBehaviour
 {
     public bool isInRange;
     public bool isInValidation;
     public UnityEvent interactAction;
-    public UnityEvent validateAction;
-    public GameObject valider;
+    //public UnityEvent validateAction;
+    //public GameObject valider;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -28,11 +29,11 @@ public class Interaction : MonoBehaviour
                 return;
             }
         }
-        if (isInValidation)
+       /* if (isInValidation)
         {
             validateAction.Invoke();
             this.gameObject.SetActive(false);
-        }
+        }*/
     }
 
 
@@ -42,6 +43,8 @@ public class Interaction : MonoBehaviour
         {
             isInRange = true;
             //Debug.Log("Player enter in range");
+            TextDisplay pickupText = GetComponent<TextDisplay>();
+            pickupText.ShowPickupText("Press SPACE to interact");
         }
         if (collision.gameObject == valider)
         {
@@ -55,6 +58,7 @@ public class Interaction : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            
             isInRange = false;
             //Debug.Log("Player enter in range");
         }
