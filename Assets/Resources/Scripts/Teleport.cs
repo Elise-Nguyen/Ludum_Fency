@@ -28,6 +28,18 @@ public class Teleport : MonoBehaviour
         player.transform.position = destinationPosition.position;
         
     }
+
+    void FixedUpdate()
+    {
+        if(!GameManager.instance.isCompleted && !GameManager.instance.isTimedOut)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(true);
+        }
+    }
 /*
     IEnumerator Wait()
     {
