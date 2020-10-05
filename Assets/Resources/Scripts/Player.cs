@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameObject hands;
     public Vector2 position;
     public float speed = 1f;
     public Rigidbody2D rb;
@@ -45,10 +46,12 @@ public class Player : MonoBehaviour
        if (Input.GetKey(KeyCode.RightArrow))
         {
             rb.velocity = Vector2.right * speed;
+            this.transform.localScale = new Vector3(1, 1, 1);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb.velocity = Vector2.left * speed;
+            this.transform.localScale = new Vector3(-1, 1, 1);
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
@@ -67,7 +70,7 @@ public class Player : MonoBehaviour
 
     // Méthode qui permet de pousser un élément, appelé à travers les interactions
     public void PushElement(GameObject element) {
-        element.transform.position = this.transform.position;
+        element.transform.position = hands.transform.position;
     }
 
     // Méthode qui permet d'afficher le cadenas, appelé à travers les interactions
@@ -157,8 +160,14 @@ public class Player : MonoBehaviour
             age++;
         }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Decor")
+        {
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+        }
+    }
 
-    
     /*
     private void OnTriggerEnter(Collider other)
     {

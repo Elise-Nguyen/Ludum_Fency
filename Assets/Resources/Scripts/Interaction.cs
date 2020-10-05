@@ -6,8 +6,10 @@ using UnityEngine.Events;
 public class Interaction : MonoBehaviour
 {
     public bool isInRange;
+    public bool isInValidation;
     public UnityEvent interactAction;
-
+    public UnityEvent validateAction;
+    public GameObject valider;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +25,13 @@ public class Interaction : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 interactAction.Invoke();
+                return;
             }
+        }
+        if (isInValidation)
+        {
+            validateAction.Invoke();
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -35,11 +43,26 @@ public class Interaction : MonoBehaviour
             isInRange = true;
             //Debug.Log("Player enter in range");
         }
+        if (collision.gameObject == valider)
+        {
+            isInValidation = true;
+            // this.gameObject.SetActive(false);
+            // Debug.Log("Valider"); //
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        isInRange = false;
-        //Debug.Log("Player exit range");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isInRange = false;
+            //Debug.Log("Player enter in range");
+        }
+        if (collision.gameObject == valider)
+        {
+            isInValidation = false;
+            // this.gameObject.SetActive(false);
+            // Debug.Log("Valider"); //
+        }
     }
 }
