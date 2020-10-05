@@ -25,7 +25,12 @@ public class GameManager : MonoBehaviour
     public float timerEnigmaGrandfather = 30f;
     public float timerEnigmaSqueleton = 20f;
     [HideInInspector]
-    public static GameManager instance;    
+    public static GameManager instance;
+
+    [Header("Baby Enigma")]
+
+    public List<GameObject> rocks = new List<GameObject>();
+
     #endregion 
     void Awake()
     {
