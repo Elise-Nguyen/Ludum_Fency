@@ -10,7 +10,7 @@ public class Interaction : MonoBehaviour
     public bool isInValidation;
     public UnityEvent interactAction;
     //public UnityEvent validateAction;
-    public GameObject valider;
+    //public GameObject valider;
     
 
     // Start is called before the first frame update
@@ -43,6 +43,8 @@ public class Interaction : MonoBehaviour
         {
             isInRange = true;
             //Debug.Log("Player enter in range");
+            TextDisplay pickupText = GetComponent<TextDisplay>();
+            pickupText.ShowPickupText("Press SPACE to interact");
         }
         if (collision.gameObject == valider)
         {
