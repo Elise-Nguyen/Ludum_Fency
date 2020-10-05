@@ -74,3 +74,11 @@ Library/ShaderCache.db
 Library/EditorUserBuildSettings.asset
 
 Library/SceneVisibilityState.asset
+
+Library/ScriptAssemblies/Unity.Timeline.dll
+
+Library/ScriptAssemblies/Unity.Timeline.Editor.dll
+
+Library/ScriptAssemblies/Unity.VSCode.Editor.dll
+
+Library/ShaderCache/EditorEncounteredVariants

@@ -213,6 +213,47 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3130329829317750896, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 63679b1ea07426b479717b9797baa611,
+        type: 3}
+    - target: {fileID: 3130329829317750896, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329829317750896, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329829903944841, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329829932551407, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000099424
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329829932551407, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 392.26624
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329829932551407, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 197
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329829932551407, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 370.46484
+      objectReference: {fileID: 0}
     - target: {fileID: 3130329830103014640, guid: a38c5a039fff50b4096b01f03d262b86,
         type: 3}
       propertyPath: m_Name
@@ -272,6 +313,73 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830182797444, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830224930985, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830361407952, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830534627586, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830707793856, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c2e03fe1e4d96e84bb682383968ffa24,
+        type: 3}
+    - target: {fileID: 3130329830707793856, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830707793856, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830707793857, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830895836977, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 449f0f613d0acb94aadf3749af70c225,
+        type: 3}
+    - target: {fileID: 3130329830895836977, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830895836977, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329830895836978, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3130329831052063260, guid: a38c5a039fff50b4096b01f03d262b86,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a38c5a039fff50b4096b01f03d262b86, type: 3}
