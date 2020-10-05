@@ -13,13 +13,10 @@ public class Enigma {
 public enum PlayerPhase {Baby, Adult, GrandFather, Squeleton}; 
 public class GameManager : MonoBehaviour
 {
-    #region Private
-    bool isTimedOut = false; 
-    bool isCompleted = false;
-    
-    #endregion
 
     #region Public
+    public bool isTimedOut = false; 
+    public bool isCompleted = false;
     public List<Enigma> enigmaRegistry = new List<Enigma>(12);
     [Range(1,12)]
     public Enigma selectedEnigma;

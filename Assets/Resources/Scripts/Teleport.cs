@@ -46,14 +46,26 @@ public class Teleport : MonoBehaviour
         //player.transform.position = destinationPosition.position;
 
     }
-    /*
-        IEnumerator Wait()
+
+    void FixedUpdate()
+    {
+        if(!GameManager.instance.isCompleted && !GameManager.instance.isTimedOut)
         {
-            waitActive = true;
-            yield return new WaitForSeconds(2.0f);
-            waitActive = false;
+            gameObject.SetActive(false);
         }
-        */
+        else
+        {
+            gameObject.SetActive(true);
+        }
+    }
+/*
+    IEnumerator Wait()
+    {
+        waitActive = true;
+        yield return new WaitForSeconds(2.0f);
+        waitActive = false;
+    }
+    */
 
 }
 
